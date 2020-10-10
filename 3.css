@@ -1,9 +1,3 @@
-
-<head>
-  
-
-</head>
-<style>
 @import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,700';
 body {
   position: relative;
@@ -46,7 +40,7 @@ body {
   width: 375px;
   z-index: 9999;
   background-color: #272a2f;
-  background-image: url("https://i.pinimg.com/originals/5c/8e/69/5c8e691ea512d4267757cf5e117efbf7.jpg");
+  background-image: url("https://avatanplus.com/files/resources/mid/5bd0b7dec3af8166a74e3e52.jpg");
   background-size: cover;
   background-position: center;
   color: #000000 ;
@@ -301,112 +295,3 @@ body {
   text-decoration: none;
   text-align: center;
 }
-</style>
-<body>
-  <div id="pincode">
-    <div class="table">
-      <div class="cell">
-
-        <div id="anleitung">
-          <p>
-            <strong>Введите код Лилия.</strong><br>
-          </p>
-        </div>
-
-        <div id="fields">
-          <div class="grid">
-            <div class="grid__col grid__col--1-of-4 numberfield"><span></span></div>
-            <div class="grid__col grid__col--1-of-4 numberfield"><span></span></div>
-            <div class="grid__col grid__col--1-of-4 numberfield"><span></span></div>
-            <div class="grid__col grid__col--1-of-4 numberfield"><span></span></div>
-          </div>
-        </div>
-
-        <div id="numbers">
-          <div class="grid">
-            <div class="grid__col grid__col--1-of-3"><button>1</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>2</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>3</button></div>
-
-            <div class="grid__col grid__col--1-of-3"><button>4</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>5</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>6</button></div>
-
-            <div class="grid__col grid__col--1-of-3"><button>7</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>8</button></div>
-            <div class="grid__col grid__col--1-of-3"><button>9</button></div>
-
-            <div class="grid__col grid__col--1-of-3"></div>
-            <div class="grid__col grid__col--1-of-3"><button>0</button></div>
-            <div class="grid__col grid__col--1-of-3"></div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <body>
-    <center><button onclick="window.location.href = 'new.html';">Инструкция</button><center>
-	 <center><button onclick="window.location.href = 'new1.html';">Загадки</button><center>
-  </body>
-  
- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script id="rendered-js">
-jQuery(document).ready(function ($) {
-  $(document).ready(function () {
-
-    // http://www.jsfuck.com/
-    var pin = +!![] + [] + (!+[] + !![] + []) + (!+[] + !![] + []) + (!+[] + !![] + !![] + !![] + []);
-    var enterCode = "";
-    enterCode.toString();
-
-    $("#numbers button").click(function () {
-
-      var clickedNumber = $(this).text().toString();
-      enterCode = enterCode + clickedNumber;
-      var lengthCode = parseInt(enterCode.length);
-      lengthCode--;
-      $("#fields .numberfield:eq(" + lengthCode + ")").addClass("active");
-
-      if (lengthCode == 3) {
-
-        // Check the PIN
-        if (enterCode == pin) {
-          // Right PIN!
-          $("#fields .numberfield").addClass("right");
-          $("#numbers").addClass("hide");
-          $("#anleitung p").html("Идем дальше!!<br>Молодец!");
-		  window.open("new3.html","_self")
-
-        } else {
-          // Wrong PIN!
-          $("#fields").addClass("miss");
-          enterCode = "";
-          setTimeout(function () {
-            $("#fields .numberfield").removeClass("active");
-          }, 200);
-          setTimeout(function () {
-            $("#fields").removeClass("miss");
-          }, 500);
-
-        }
-
-      } else {}
-
-    });
-
-    $("#restartbtn").click(function () {
-      enterCode = "";
-      $("#fields .numberfield").removeClass("active");
-      $("#fields .numberfield").removeClass("right");
-      $("#numbers").removeClass("hide");
-      $("#anleitung p").html("<strong>Please enter the correct PIN-Code.</strong><br> It is: 3444 / Also try a wrong code");
-    });
-
-  });
-});
-//# sourceURL=pen.js
-    </script>
-</body>
-
